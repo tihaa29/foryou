@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #dfe9f3, #f7f7f7);
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            color: #444;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 700px;
+            margin: auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            animation: fadeIn 2s ease-in-out;
+            max-height: 80vh;
+            overflow-y: scroll;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h2 {
+            font-size: 36px;
+            font-family: 'Great Vibes', cursive;
+            color: #5d5b6a;
+        }
+        .journey {
+            margin-top: 30px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+            font-size: 18px;
+            color: #333;
+            animation: fadeIn 2s ease-in-out;
+        }
+        img {
+            width: 100%;
+            border-radius: 10px;
+            animation: zoomIn 2s ease-in-out;
+        }
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        .floating-letter {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            cursor: pointer;
+            animation: float 3s infinite ease-in-out;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .message-container {
+            display: none;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.6;
+            animation: fadeIn 2s ease-in-out;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        iframe {
+            width: 100%;
+            height: 400px;
+            border-radius: 15px;
+            margin-top: 20px;
+            border: none;
+        }
+        .floating-letter .material-icons {
+            font-size: 50px;
+            color: #5d5b6a;
+        }
+        /* Music Button Styling */
+        #music {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-size: cover;
+            border: none;
+            background-image: url('https://img.icons8.com/ios/452/play.png');
+            cursor: pointer;
+            transition: background-image 0.3s ease;
+        }
+        .instruction-text {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #444;
+            animation: fadeIn 2s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Our Love Story 💕</h2>
+        
+        <!-- Instruction Text to Click Music First -->
+        <p class="instruction-text">Before you start reading, please click the music button 🎵 to set the mood. I want you to feel the music as you read my words. 😊</p>
+        
+        <p>Every love story is beautiful, but ours is my favorite. Here’s our journey together. ✨</p>
+        
+        <!-- Our Journey Together Section -->
+        <div class="journey">
+            <h3>Our Journey Together 🚀</h3>
+            <p>Baby, do you remember 1/9/2023? We first met as pengapit (yes, I didn't even notice you at first 😅). But you kept staring at me, which I didn’t get at that time. Honestly, when we were taking outdoor pictures, I wanted to ask you to take one with me, but I got shy and didn’t. But then, the day Tirah said you asked for my number, I was like... okayyy 😂 I was a bit nervous, but I still gave it to you—susah nak reject orang kan?</p>
+            <p>At first, I wasn’t so close with you, sebab you didn’t talk much. Hahah! But day by day, I started falling in love with the way you are—so calm, so steady, and always there for me. I accepted you because of Tirah at first, but now, I accept you for who you are. You taught me to be strong and to always stick by you. I really appreciate you, Baby. 🥰</p>
+            <p>And now, here we are, after all that... and I’m so thankful for every moment with you. Always remember, I’m so lucky to have you, B. 💖</p>
+        </div>
+
+        <!-- Floating letter (mail icon) to show message -->
+        <div class="floating-letter" onclick="showMessage()">
+            <span class="material-icons">mail</span>
+        </div>
+
+        <!-- Hidden message container -->
+        <div id="message-box" class="message-container">
+            <h3>My Message for You 💌</h3>
+            <p>B,</p>
+            <p>Ayg rasa lately kita makin jauh. Masing-masing sibuk dengan hidup sendiri, and sometimes ayg rasa macam B dah jauh dari ayg. Walaupun ayg cuba faham, dalam hati ayg, ayg tetap nak spend time dengan B. Tapi kadang-kadang B nampak macam okay je tanpa ayg. Maybe sebab busy, but it’s hard for me to accept that sometimes.</p>
+            <p>Ayg tahu kadang-kadang ayg ni macam mengada, selalu harap lebih daripada B. Tapi the truth is, ayg just nak rasa yang B hargai ayg, even just a little. Ayg tak nak ganggu B, tak nak annoying. Ayg just nak tahu yang ayg still penting dalam hidup B. Kadang-kadang rasa macam B okay je tanpa ayg. Life B nampak macam lebih senang, tapi ayg, tanpa B, everything feels wrong.</p>
+            <p>Ayg tak nak nampak macam desperate or too needy, but deep down, ayg ni manusia biasa, and I miss you. I know you always say I want to chat with you 24/7, but honestly, it’s not that. I don’t expect that much, but even just a little time, even a few minutes, would mean so much to me. Sometimes ayg rasa macam I’m just waiting for a reply, and I don’t even know if B okay ke tak, or if B even misses ayg. Ayg cuba untuk ubah, try to be less demanding, less clingy, less chatty, so that you don’t feel stressed. I just want to give you space, but deep down, I still hope that you need me.</p>
+            <p>Kadang-kadang ayg rasa macam tak cukup, even though I’m trying so hard. I act strong, but in the end, I still want you here, to talk, to laugh, to be with me. Sometimes I feel like I’m not enough, but I try to hide it, supaya B tak rasa burdened. Ayg cuma nak B tahu yang ayg sangat sayangkan B. And even if I try to act like I’m okay, it still hurts. Ayg just hope B boleh faham, that I care lebih daripada yang ayg tunjukkan.</p>
+            <p>I’m here, even when you’re not around. Ayg still waiting, still loving, still thinking of you. But I need you to know that I miss you so much. And I hope, even if we’re apart, you’ll know that I’m still here for you, no matter what.</p>
+            <p>Love,</p>
+            <p>Ayg</p>
+        </div>
+    </div>
+
+    <!-- Music Button -->
+    <button id="music" onclick="toggleMusic()"></button>
+
+    <!-- Link to script.js -->
+    <script src="script.js"></script>
+</body>
+</html>
